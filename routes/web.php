@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Livewire\Category;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,5 @@ Route::group(['prefix'=>'admin'], function (){
     Route::get('/', function () {
     dd(1232412412);
     });
-    Route::get('/categories', Category::class);
+    Route::get('/categories', [CategoryController::class, 'index']);
 });
